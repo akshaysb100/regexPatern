@@ -1,0 +1,13 @@
+#!/bin/bash -x
+
+read email
+
+pat="(^[a-zA-Z0-9]{1,}[.]$)+@{1}"
+pate="^[a-zA-Z0-9]+[._a-zA-Z0-9]+@{1}+[a-zA-Z]{1,}$"
+
+if [[ $email =~ $pate ]]
+then
+	echo "valid"
+else
+	echo "invalid"
+fi
